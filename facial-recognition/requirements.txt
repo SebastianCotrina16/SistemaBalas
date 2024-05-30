@@ -1,0 +1,5 @@
+flask
+sqlalchemy
+opencv-python
+flask-cors
+dlib
