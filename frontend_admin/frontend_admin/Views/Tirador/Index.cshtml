@@ -1,0 +1,26 @@
+﻿@model IEnumerable<frontend_admin.Models.Usuario>
+
+<h2>Lista de Tiradores</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>DNI</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tirador in Model)
+        {
+            <tr>
+                <td>@tirador.IdUsuario</td>
+                <td>@tirador.Nombre</td>
+                <td>@tirador.Correo</td>
+                <td>@tirador.DNI</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FaceRecognitionTestCase-20241115224445" tests="5" file=".py" time="4.880" timestamp="2024-11-15T22:44:50" failures="0" errors="0" skipped="0">
+	<testcase classname="FaceRecognitionTestCase" name="test_descriptor_consistency" time="1.684" timestamp="2024-11-15T22:44:47" file="test_app.py" line="80">
+		<system-out><![CDATA[(636, 641, 3)
+Working
+(1600, 900, 3)
+Working
+]]></system-out>
+	</testcase>
+	<testcase classname="FaceRecognitionTestCase" name="test_recognize_unknown_user" time="0.470" timestamp="2024-11-15T22:44:47" file="test_app.py" line="45"/>
+	<testcase classname="FaceRecognitionTestCase" name="test_recognize_user" time="0.357" timestamp="2024-11-15T22:44:48" file="test_app.py" line="33">
+		<system-out><![CDATA[User found
+]]></system-out>
+	</testcase>
+	<testcase classname="FaceRecognitionTestCase" name="test_register_user" time="0.594" timestamp="2024-11-15T22:44:48" file="test_app.py" line="15">
+		<system-out><![CDATA[(636, 641, 3)
+Working
+]]></system-out>
+	</testcase>
+	<testcase classname="FaceRecognitionTestCase" name="test_unique_descriptor" time="1.776" timestamp="2024-11-15T22:44:50" file="test_app.py" line="54">
+		<system-out><![CDATA[(599, 434, 3)
+Working
+(1389, 1000, 3)
+Working
+]]></system-out>
+	</testcase>
+</testsuite>

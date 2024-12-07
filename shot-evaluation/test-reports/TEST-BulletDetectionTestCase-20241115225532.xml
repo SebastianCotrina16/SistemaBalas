@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuite name="BulletDetectionTestCase-20241115225532" tests="5" time="4.765" failures="0" errors="0">
+	<testcase classname="BulletDetectionTestCase" name="test_detection_with_excess_bullets" time="0.546"/>
+	<testcase classname="BulletDetectionTestCase" name="test_detection_with_invalid_image" time="0.189"/>
+	<testcase classname="BulletDetectionTestCase" name="test_no_bullet_detected" time="1.005"/>
+	<testcase classname="BulletDetectionTestCase" name="test_no_image_uploaded" time="0.001"/>
+	<testcase classname="BulletDetectionTestCase" name="test_successful_bullet_detection_with_score" time="3.024"/>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,61 @@
+﻿@model frontend_admin.Models.Reportes
+@{
+    var impactos = ViewBag.ImpactosDetalles as List<frontend_admin.Models.ImpactosBala>;
+}
+
+<h2>Detalles del Reporte</h2>
+
+<div>
+    <h4>Reporte ID: @Model.IdReporte</h4>
+    <dl class="row">
+        <dt class="col-sm-3">Usuario</dt>
+        <dd class="col-sm-9">@Model.Usuario.Nombre</dd>
+
+        <dt class="col-sm-3">Fecha del Reporte</dt>
+        <dd class="col-sm-9">@Model.FechaReporte</dd>
+
+        <dt class="col-sm-3">Total Impactos</dt>
+        <dd class="col-sm-9">@Model.TotalImpactos</dd>
+
+        <dt class="col-sm-3">Promedio de Precisión</dt>
+        <dd class="col-sm-9">@Model.PromedioPrecision</dd>
+
+        <dt class="col-sm-3">Detalles</dt>
+        <dd class="col-sm-9">@Model.Detalles</dd>
+
+        <dt class="col-sm-3">Impactos Procesados</dt>
+        <dd class="col-sm-9">
+            @if (impactos != null && impactos.Any())
+            {
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID Impacto</th>
+                            <th>Ubicación</th>
+                            <th>Precisión</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var impacto in impactos)
+                        {
+                            <tr>
+                                <td>@impacto.IdImpacto</td>
+                                <td>@impacto.Ubicacion</td>
+                                <td>@impacto.Precision</td>
+                                <td>@impacto.Fecha.ToShortDateString()</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>No se encontraron impactos para este reporte.</p>
+            }
+        </dd>
+    </dl>
+    <a asp-action="Index" class="btn btn-secondary">Volver a la lista</a>
+    <a asp-action="ExportPdf" asp-route-id="@Model.IdReporte" class="btn btn-primary">Exportar PDF</a>
+
+</div>

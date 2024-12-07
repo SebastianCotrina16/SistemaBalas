@@ -1,0 +1,33 @@
+﻿@model IEnumerable<frontend_admin.Models.Reportes>
+
+<h2>Lista de Reportes</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Fecha</th>
+            <th>Total Impactos</th>
+            <th>Promedio de Precisión</th>
+            <th>Detalles</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reporte in Model)
+        {
+            <tr>
+                <td>@reporte.IdReporte</td>
+                <td>@reporte.Usuario.Nombre</td>
+                <td>@reporte.FechaReporte.ToShortDateString()</td>
+                <td>@reporte.TotalImpactos</td>
+                <td>@reporte.PromedioPrecision</td>
+                <td>@reporte.Detalles</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@reporte.IdReporte" class="btn btn-info">Ver Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
